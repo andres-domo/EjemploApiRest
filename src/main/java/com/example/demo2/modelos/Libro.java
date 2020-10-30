@@ -18,8 +18,6 @@ public class Libro {
 	@Column(name="Título", nullable = false )
 	private String titulo;
 	
-	@Column(name="Autor")
-	private String autor;
 	
 	@Column(name="Isbn")
 	private int isbn;
@@ -36,12 +34,7 @@ public class Libro {
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
 	}
-	public String getAutor() {
-		return autor;
-	}
-	public void setAutor(String autor) {
-		this.autor = autor;
-	}
+
 	public int getIsbn() {
 		return isbn;
 	}

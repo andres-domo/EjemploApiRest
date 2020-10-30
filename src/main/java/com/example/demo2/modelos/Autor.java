@@ -1,23 +1,29 @@
 package com.example.demo2.modelos;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "Autor")
 public class Autor {
 
+	@Id
+	@Column(name="Id")
 	private int id;
 	
+	@Column(name="Nombre")
 	private String nombre;
 	
-	private int edad;
+	@Column(name="Apellidos")
+	private String apellidos;
 
-	public Autor(int id, String nombre, int edad) {
+	public Autor(int id, String nombre, String apellidos) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
-		this.edad = edad;
+		this.apellidos = apellidos;
 	}
 
 	public int getId() {
@@ -36,12 +42,12 @@ public class Autor {
 		this.nombre = nombre;
 	}
 
-	public int getEdad() {
-		return edad;
+	public String getEdad() {
+		return apellidos;
 	}
 
-	public void setEdad(int edad) {
-		this.edad = edad;
+	public void setEdad(String apellidos) {
+		this.apellidos = apellidos;
 	}
 	
 	 
