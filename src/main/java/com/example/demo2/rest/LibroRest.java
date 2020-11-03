@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo2.dao.DaoRepositorio;
+import com.example.demo2.dao.LibroRepositorio;
 import com.example.demo2.modelos.Libro;
 
 @RestController
@@ -21,7 +21,7 @@ import com.example.demo2.modelos.Libro;
 public class LibroRest {
 
 	@Autowired
-	private DaoRepositorio libroDao;
+	private LibroRepositorio libroDao;
 	
 //métodos http; solicitud al servidor
 	

@@ -19,12 +19,7 @@ public class Autor {
 	@Column(name="Apellidos")
 	private String apellidos;
 
-	public Autor(int id, String nombre, String apellidos) {
-		super();
-		this.id = id;
-		this.nombre = nombre;
-		this.apellidos = apellidos;
-	}
+	
 
 	public int getId() {
 		return id;
@@ -42,11 +37,11 @@ public class Autor {
 		this.nombre = nombre;
 	}
 
-	public String getEdad() {
+	public String getApellidos() {
 		return apellidos;
 	}
 
-	public void setEdad(String apellidos) {
+	public void setApellidos(String apellidos) {
 		this.apellidos = apellidos;
 	}
 	

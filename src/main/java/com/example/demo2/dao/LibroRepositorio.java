@@ -9,7 +9,7 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.example.demo2.modelos.Libro;
 
-public interface DaoRepositorio extends CrudRepository<Libro, Integer>{
+public interface LibroRepositorio extends CrudRepository<Libro, Integer>{
 
 	//@Query(value = "SELECT u FROM Libros U")
 	//List<Libro> findAllLibro(Sort sort);
