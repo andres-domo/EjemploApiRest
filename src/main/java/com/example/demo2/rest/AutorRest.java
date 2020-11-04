@@ -53,7 +53,7 @@ public class AutorRest {
 		}
 		
 		//mëtodo Put
-		@PutMapping("/actualizar")//http://localhost:8080/libros/actualizar
+		@PutMapping("/actualizar")//http://localhost:8080/autor/actualizar
 		public void actualizar(@RequestBody Autor autor) {
 			autorRepositorio.save(autor);
 		}

@@ -14,6 +14,6 @@ public interface LibroRepositorio extends CrudRepository<Libro, Integer>{
 	//@Query(value = "SELECT u FROM Libros U")
 	//List<Libro> findAllLibro(Sort sort);
 	
-	@Query (value= "SELECT Autor FROM Libros", nativeQuery = true)
+	@Query (value= "SELECT titulo FROM Libros", nativeQuery = true)
 	List<String> test1();
 }

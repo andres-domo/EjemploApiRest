@@ -3,6 +3,8 @@ package com.example.demo2.modelos;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -19,6 +21,10 @@ public class Autor {
 	@Column(name="Apellidos")
 	private String apellidos;
 
+	
+	@ManyToOne
+	@JoinColumn(name="Id_Libro")
+	Libro libro;
 	
 
 	public int getId() {
