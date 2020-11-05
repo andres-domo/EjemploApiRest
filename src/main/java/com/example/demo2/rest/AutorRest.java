@@ -58,4 +58,13 @@ public class AutorRest {
 			autorRepositorio.save(autor);
 		}
 		
+		
+		//MÉTODO get para consulta de @query del interface Dao. http://localhost:8080/libros/test1
+		@GetMapping("/test2")
+		public List<String> test2() {
+			
+		return autorRepositorio.test2();
+		}
+		
+		
 }

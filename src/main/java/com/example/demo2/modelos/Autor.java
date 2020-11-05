@@ -2,30 +2,39 @@ package com.example.demo2.modelos;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+//import javax.persistence.GeneratedValue;
+//import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+//import javax.persistence.JoinColumn;
+// import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Autor")
+@Table(name = "Autores")
 public class Autor {
 
 	@Id
-	@Column(name="Id")
+	//@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "Id")
 	private int id;
-	
-	@Column(name="Nombre")
+
+	@Column(name = "Nombre", nullable = false)
 	private String nombre;
-	
-	@Column(name="Apellidos")
+
+	@Column(name = "Apellidos")
 	private String apellidos;
 
-	
-	@ManyToOne
-	@JoinColumn(name="Id_Libro")
-	Libro libro;
-	
+	//@ManyToOne
+	//@JoinColumn(name = "libro_Id")
+	//private Libro libro;
+
+	public Autor(int id, String nombre, String apellidos) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+		this.apellidos = apellidos;
+		//this.libro = libro;
+	}
 
 	public int getId() {
 		return id;
@@ -50,10 +59,13 @@ public class Autor {
 	public void setApellidos(String apellidos) {
 		this.apellidos = apellidos;
 	}
-	
-	 
-	
-	
-	
-	
+
+	/*public Libro getIdLibro() {
+		return libro;
+	}
+
+	public void setIdLibro(Libro libro) {
+		this.libro = libro;
+	}*/
+
 }
