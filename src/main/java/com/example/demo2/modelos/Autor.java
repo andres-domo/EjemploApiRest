@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 //import javax.persistence.GenerationType;
 import javax.persistence.Id;
 //import javax.persistence.JoinColumn;
-// import javax.persistence.ManyToOne;
+//import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -24,16 +24,13 @@ public class Autor {
 	@Column(name = "Apellidos")
 	private String apellidos;
 
-	//@ManyToOne
-	//@JoinColumn(name = "libro_Id")
-	//private Libro libro;
+	/*@ManyToOne
+	@JoinColumn(name = "libro_Id")
+	private Libro libro;
 
-	public Autor(int id, String nombre, String apellidos) {
-		super();
-		this.id = id;
-		this.nombre = nombre;
-		this.apellidos = apellidos;
-		//this.libro = libro;
+	*/
+
+	public Autor() {
 	}
 
 	public int getId() {
@@ -66,6 +63,6 @@ public class Autor {
 
 	public void setIdLibro(Libro libro) {
 		this.libro = libro;
-	}*/
-
+	}
+*/
 }

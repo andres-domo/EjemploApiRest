@@ -1,6 +1,7 @@
 package com.example.demo2.modelos;
 
-//import java.util.List;
+//import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,6 +9,7 @@ import javax.persistence.Entity;
 //import javax.persistence.GeneratedValue;
 //import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
 //import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -26,16 +28,22 @@ public class Libro {
 	@Column(name = "Isbn", unique = true)
 	private int isbn;
 
-	//@OneToMany(mappedBy = "libro")
-	//private List<Autor> lista_autor;
+	/*@OneToMany(mappedBy = "libro")
+	private List<Autor> autores;
 
-	public Libro(int id, String titulo, int isbn) {
+	*/
+		
+	public Libro(int id, String titulo, int isbn, List<Autor> autores) {
 		super();
 		this.id = id;
 		this.titulo = titulo;
 		this.isbn = isbn;
-		
+		//this.autores = autores;
 	}
+
+
+
+	
 
 	public int getId() {
 		return id;
@@ -61,12 +69,23 @@ public class Libro {
 		this.isbn = isbn;
 	}
 
-	/*public List<Autor> getLista_autor() {
-		return lista_autor;
+/*	public List<Autor> getAutores() {
+		return autores;
 	}
 
-	public void setLista_autor(List<Autor> lista_autor) {
-		this.lista_autor = lista_autor;
-	}*/
+	public void setAutores(List<Autor> autores) {
+		this.autores = autores;
+	}
 
+	
+
+	//metodo para la relacion
+	
+		public void agregarAutor(Autor coautor){
+		if (autores==null) autores=new ArrayList<>();
+		autores.add(coautor);
+		coautor.setIdLibro(this);
+		}
+	
+	*/
 }
