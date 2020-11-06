@@ -1,8 +1,10 @@
 package com.example.demo2.modelos;
 
+import java.util.ArrayList;
 //import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 //import javax.persistence.GenerationType;
@@ -10,7 +12,7 @@ import javax.persistence.Entity;
 //import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-//import javax.persistence.OneToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -28,22 +30,25 @@ public class Libro {
 	@Column(name = "Isbn", unique = true)
 	private int isbn;
 
-	/*@OneToMany(mappedBy = "libro")
+	@OneToMany(mappedBy = "libro",cascade = CascadeType.ALL)
 	private List<Autor> autores;
 
-	*/
+	
 		
 	public Libro(int id, String titulo, int isbn, List<Autor> autores) {
 		super();
 		this.id = id;
 		this.titulo = titulo;
 		this.isbn = isbn;
-		//this.autores = autores;
+		this.autores = autores;
 	}
 
 
+	public Libro() {
+		super();
+	}
 
-	
+
 
 	public int getId() {
 		return id;
@@ -69,7 +74,7 @@ public class Libro {
 		this.isbn = isbn;
 	}
 
-/*	public List<Autor> getAutores() {
+	public List<Autor> getAutores() {
 		return autores;
 	}
 
@@ -87,5 +92,5 @@ public class Libro {
 		coautor.setIdLibro(this);
 		}
 	
-	*/
+	
 }

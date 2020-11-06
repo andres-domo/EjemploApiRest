@@ -5,8 +5,8 @@ import javax.persistence.Entity;
 //import javax.persistence.GeneratedValue;
 //import javax.persistence.GenerationType;
 import javax.persistence.Id;
-//import javax.persistence.JoinColumn;
-//import javax.persistence.ManyToOne;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -24,11 +24,11 @@ public class Autor {
 	@Column(name = "Apellidos")
 	private String apellidos;
 
-	/*@ManyToOne
+	@ManyToOne
 	@JoinColumn(name = "libro_Id")
 	private Libro libro;
 
-	*/
+	
 
 	public Autor() {
 	}
@@ -57,12 +57,12 @@ public class Autor {
 		this.apellidos = apellidos;
 	}
 
-	/*public Libro getIdLibro() {
+	public Libro getIdLibro() {
 		return libro;
 	}
 
 	public void setIdLibro(Libro libro) {
 		this.libro = libro;
 	}
-*/
+
 }
