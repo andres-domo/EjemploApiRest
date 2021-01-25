@@ -91,6 +91,8 @@ public class Libro {
 		autores.add(coautor);
 		coautor.setIdLibro(this);
 		}
+
+
 	
 	
 }

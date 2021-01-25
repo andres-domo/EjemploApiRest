@@ -30,8 +30,14 @@ public class Autor {
 	@JoinColumn(name = "libro_Id")
 	@JsonIgnore
 	private Libro libro;
-
 	
+	public Autor(int id, String nombre, String apellidos, Libro libro) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+		this.apellidos = apellidos;
+		this.libro = libro;
+	}
 
 	public Autor() {
 	}
