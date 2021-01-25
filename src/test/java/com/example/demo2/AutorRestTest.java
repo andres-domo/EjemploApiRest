@@ -47,7 +47,7 @@ public class AutorRestTest {
 
 	private Autor autordto;
 
-	@Before
+	@Before//antes de los test
 	public void prepare() throws ServiceException, ValidationException {
 
 		autordto = new Autor();
